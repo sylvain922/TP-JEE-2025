@@ -5,6 +5,7 @@
 <%
   String user = (String) session.getAttribute("user");
   if (user != null) {
+    response.sendRedirect("login.jsp");
 %>
 <%@ include file="fragment/barnav-login.jsp" %>
 <%
