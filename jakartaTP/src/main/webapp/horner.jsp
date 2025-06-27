@@ -4,17 +4,13 @@
 
 <%
   String user = (String) session.getAttribute("user");
-  if (user != null) {
+  if (user == null) {
     response.sendRedirect("login.jsp");
-%>
-<%@ include file="fragment/barnav-login.jsp" %>
-<%
-} else {
-%>
-<%@ include file="fragment/barnav.jsp" %>
-<%
+    return;
   }
 %>
+
+<%@ include file="fragment/barnav-login.jsp" %>
 
 <main>
   <h1>Méthode de Horner</h1>
