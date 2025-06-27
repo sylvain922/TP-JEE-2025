@@ -15,7 +15,7 @@ public class ServletHorner extends HttpServlet {
 
         HttpSession session = request.getSession(false);
         if (session == null || session.getAttribute("user") == null) {
-            request.getRequestDispatcher("login.jsp").forward(request, response);
+            request.getRequestDispatcher("connexion.jsp").forward(request, response);
 
             return;
         }
