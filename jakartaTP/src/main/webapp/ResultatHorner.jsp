@@ -1,11 +1,11 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+n<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%! String title = "Résultat Horner"; %>
 <%@ include file="fragment/header.jsp" %>
 
 <%
   String user = (String) session.getAttribute("user");
   if (user == null) {
-    response.sendRedirect("login.jsp");
+    response.sendRedirect("connexion.jsp");
     return;
   }
 %>
