@@ -1,19 +1,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%! String title = "Résultat Horner"; %>
 <%@ include file="fragment/header.jsp" %>
+
 <%
   String user = (String) session.getAttribute("user");
-  if (user != null) {
+  if (user == null) {
     response.sendRedirect("login.jsp");
-%>
-<%@ include file="fragment/barnav-login.jsp" %>
-<%
-} else {
-%>
-<%@ include file="fragment/barnav.jsp" %>
-<%
+    return;
   }
 %>
+
+<%@ include file="fragment/barnav-login.jsp" %>
 <main>
   <h1>Liste des résultats enregistrés</h1>
 
